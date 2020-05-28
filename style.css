@@ -291,39 +291,39 @@ ul li a:hover {
 
 .testimonials {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
-.carusel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.slider {
+  position: relative;
   margin-top: 50px;
 }
 
-.carusel-container {
+.slider .wrap {
+  width: 80%;
+  margin: 0 auto;
+
+  padding-bottom: 20px;
+  position: relative;
+  border: 1px solid #253142;
+}
+
+.slider .wrap .slider-item {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  position: relative;
+}
+
+.slider .wrap .slider-item .slider-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 960px;
-  border: 1px solid #4d4d4d;
-  margin-bottom: 100px;
+}
+.slider .wrap .slider-item .slider-content img {
+  padding-right: 35px;
 }
 
-.carusel-content img {
-  padding-left: 110px;
-  margin-top: 70px;
-  margin-bottom: 60px;
-  width: 155px;
-  height: 155px;
-}
-
-.client-information {
-  padding-left: 20px;
-  margin-top: 40px;
-  overflow: hidden;
-  max-height: 300px;
-}
-.name-client {
+.slider-content .slider-text .name-client {
   font-family: "Asap", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -333,7 +333,7 @@ ul li a:hover {
   padding-top: 30px;
 }
 
-.name-company {
+.slider-content .slider-text .name-company {
   font-family: "Asap", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -342,15 +342,114 @@ ul li a:hover {
   margin: 0;
 }
 
-.comments {
+.slider-content .slider-text .comments {
   font-family: "Asap", sans-serif;
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
   color: #4d4d4d;
-  max-width: 400px;
-  max-height: 300px;
+
   overflow: hidden;
+}
+
+.slider .wrap .prev {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.slider .wrap .prev:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slider .wrap .prev:hover .arrow-left {
+  opacity: 1;
+}
+
+.slider .wrap .prev .arrow-left {
+  width: 30px;
+  height: 30px;
+  background: url(icons/left-arrow.svg) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: 0.4;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.slider .wrap .next {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 100%;
+  right: 1px;
+}
+
+.slider .wrap .next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slider .wrap .next:hover .arrow-right {
+  opacity: 1;
+}
+
+.slider .wrap .next .arrow-right {
+  width: 30px;
+  height: 30px;
+  background: url(icons/right-arrow.svg) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: 0.4;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.slider-dots {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slider-dots .dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 10px;
+  background-color: #9c9a97;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+.slider-dots .dot-active {
+  background-color: #000;
+  height: 18px;
+  width: 18px;
 }
 
 /* End Testimonials style */
